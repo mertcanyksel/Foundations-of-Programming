@@ -44,5 +44,4 @@ int main()
 	cout << "What is your name ? ";
 	cin >> userName;
 	cout << "Welcome " << userName << endl;
-	CO
 }
