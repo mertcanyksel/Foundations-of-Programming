@@ -1,0 +1,4 @@
+PS D:\Users\16253\source\repos\projectTwo> git add .
+error: open("source/repos/projectTwo/.vs/projectTwo/FileContentIndex/7d17964f-87cb-49b7-ac21-406889987a1f.vsidx"): Permission denied
+error: unable to index file 'source/repos/projectTwo/.vs/projectTwo/FileContentIndex/7d17964f-87cb-49b7-ac21-406889987a1f.vsidx'
+fatal: adding files failed
