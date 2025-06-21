@@ -50,8 +50,9 @@ int main() {
 	cin >> input2;
 
 
-	firstPoint inputs{ input1,input2 };  //'inputs' is a variable  and we initialized with input1 and input2
-	 //Create a pointer and remember pointer is just a variable that hold the memory address
+	firstPoint inputs{ input1,input2 };  
+	//'inputs' is a variable  and we initialized with input1 and input2
+	//Create a pointer and remember pointer is just a variable that hold the memory address
 	//If we use integer pointers , double pointers ,float pointers in the past, now we'll just gonna use
 	//  'firstPoint' pointers
 	
