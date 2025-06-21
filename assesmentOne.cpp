@@ -76,3 +76,125 @@ int main() {
 	cout << "With pointer arrows ->\n" ;
 	cout << p->x << "\n";  // equivelent to (*p).x
 	cout << p->y << "\n";
+	}
+
+
+ENUM DATA TYPE
+#include <iostream>
+using namespace std;
+  
+enum StatesOne
+{
+	Working,
+	Failed 
+};
+
+enum StatesTwo {
+	Workingg = 1,
+	Failedd
+};
+
+
+int main() {
+	StatesOne mystateone = Working;
+	cout << mystateone <<"\n";
+
+// We can not give the same name for the name of the values
+
+	StatesTwo mystatetwo = Workingg;
+	cout << mystatetwo << "\n";
+
+
+}
+
+
+//ENUM SECOND Example
+#include <iostream>
+using namespace std;
+  
+enum StatesOne
+{
+	Working,
+	Failed =5,
+	Stable,
+	Not_stable
+};
+
+
+
+
+int main() {
+	StatesOne mystateone = Working;
+	cout << mystateone <<"\n";
+
+	StatesOne mystatetwo = Stable;
+	cout << mystatetwo << "\n";
+
+
+
+}
+
+
+
+
+ENUM THIRD EXAMPLE
+#include <iostream>
+using namespace std;
+  
+enum statesone
+{
+	working,
+	failed ,
+	stable,
+	not_stable
+};
+
+
+
+
+int main() {
+
+	int userinput;
+	cout << "what's your work status :";
+	cin >> userinput;
+
+	statesone currentstate;
+
+
+
+	//we can not assign an int (or different type of data) to entity of type "statesone"
+	// we need to convert cast this integer (userinput) in to statesone enum 
+	// and than we can assign userinput to currentstate variable
+	// ---->	currentstate = userinput; if we try that we can see the problem
+	currentstate = (statesone)userinput;
+
+	switch (currentstate) {
+	case working :
+		cout << "you are working";
+	case failed :
+		cout << "you failed ";
+	case stable :
+		cout << "you are working stable";
+	case not_stable :
+		cout << "you are not working stable";
+	}
+
+
+}
+
+//TYPEDEF 
+#include <iostream>
+using namespace std;
+
+typedef int kilometer;
+
+kilometer main() {
+
+	kilometer cairns =900, brisbane, melbourne;
+	cout << "Sydney to Cairns :" << cairns << "km";
+	
+
+
+}
+
+
