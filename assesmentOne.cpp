@@ -198,3 +198,63 @@ kilometer main() {
 }
 
 
+
+
+
+
+//PART 2
+
+#include <iostream>
+using namespace std;
+#include <algorithm>
+
+//Asked to array size 
+// create a array 
+// For example 10  program has to ask 10 times the values of array
+// Display the array via sort element
+
+
+int main() {
+
+	int arraySize;
+	cout << "Enter Array Size :";
+	cin >> arraySize;
+
+	const int constantArray = 100;
+	cout << "Array will hold max 100 elements\n";
+
+	int values[constantArray] = {};
+
+	for (int i = 0; i < arraySize; i++) {
+		cout << i + 1 << ". Value of array = ";
+		cin >> values[i];
+	}
+
+	cout << "Your array elements :";
+	for (int m = 0; m < arraySize; m++) {
+		cout << " " << values[m];
+	}
+
+
+	cout << "\n";
+	sort(values, values + arraySize);
+
+	cout << "Sorting array using insertion sort ...\n";
+	cout << "Array after sorting :";
+	for (int m = 0; m < arraySize; m++) {
+		cout << values[m] << " ";
+	}
+
+
+
+}
+/*values: This is a pointer to the beginning of your array.
+values + arraySize: This is a pointer to the end of the part of
+the array you want to sort — not the end of the entire 100-element
+array, just the part the user entered.
+So you're telling sort to sort from index 0 to arraySize - 1.*/
+
+
+
+
+
