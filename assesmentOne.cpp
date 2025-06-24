@@ -258,3 +258,45 @@ So you're telling sort to sort from index 0 to arraySize - 1.*/
 
 
 
+
+
+
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+
+	int temp;
+	int inputsAmount;
+
+	cout << "Have many inputs do you wanna use :";
+	cin >> inputsAmount;
+	int inputs;
+	int array[100] = { };
+
+	for (int m = 0; m < inputsAmount; m++) {
+		cout << m + 1 << ". Elements of your array :";
+		cin >> inputs;
+		array[m] = inputs;
+
+	}
+
+
+	for (int i = 0; i < inputsAmount - 1; i++) {
+		for (int j = i + 1; j < inputsAmount; j++) {
+			if (array[i] > array[j]) {
+				temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+
+	for (int i = 0; i < inputsAmount; i++) {
+		cout << array[i] << " ";
+	}
+}
+
