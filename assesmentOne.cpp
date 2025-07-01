@@ -224,10 +224,9 @@ kilometer main() {
 
 	kilometer cairns =900, brisbane, melbourne;
 	cout << "Sydney to Cairns :" << cairns << "km";
-	
-
 
 }
+
 
 
 
