@@ -332,3 +332,31 @@ int main()
 	}
 }
 
+
+
+
+
+
+
+//
+//struct Person {
+//	string name;
+//	int age;
+//};
+//
+//int main() {
+//	Person student;
+//	student.age = 23;
+//	student.name = "Carl";
+//
+//	Person array[2];
+//	array[0].name = "Mert";
+//	array[0].age = 24;
+//
+//	array[1].name = "Can";
+//	array[1].age = 26;
+//
+//
+//	cout << array[0].age;
+//
+//}
