@@ -135,6 +135,38 @@ int main() {
 }
 
 
+#include <iostream>
+using namespace std;
+
+enum StatesOne
+{
+	Working=1,
+	Failed =0,
+	Stable,
+	Not_stable
+};
+
+
+
+
+int main() {
+	StatesOne mystateone = Working;
+	cout << mystateone << "\n";
+
+	StatesOne mystatetwo = Stable;
+	cout << mystatetwo << "\n";
+
+
+
+}
+
+
+
+
+
+
+
+
 
 
 ENUM THIRD EXAMPLE
