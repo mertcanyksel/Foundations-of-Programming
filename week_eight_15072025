@@ -1,0 +1,454 @@
+//// week_eight.cpp : This file contains the 'main' function. Program execution begins and ends there.
+////
+//
+//#include <iostream>
+//using namespace std;
+//
+//struct dogDataType {
+//	string microchipId;
+//	string name;
+//	string breed;
+//};
+//
+//
+//int main(){
+//	const int  dogCount = 3;
+//	//variables to hold dog`s information
+//	
+//	string microchipId;
+//	string name;
+//	string breed;
+//	bool errorFound=false;
+//	dogDataType dogsList[dogCount]; //array to hold all dog`s information
+//
+//
+//
+//	for (int i = 0; i < dogCount; i++) {
+//		errorFound = false;
+//		cout << "Enter microchip ID :"; cin >> microchipId;
+//		cout << "Enter dog`s name :"; cin >> name;
+//		cout << "Enter the dog`s breed :"; cin >> breed;
+//
+//		//validate the user input data for the 3 dog`s properties
+//		if (microchipId.length() == 0 || name.length() == 0 || breed.length() == 0) {
+//			errorFound = true;
+//		}
+//		else { // all data has been input and is valid
+//			dogsList[i].microchipId = microchipId;
+//			dogsList[i].name = name;
+//			dogsList[i].breed = breed;
+//		}
+//
+//		if (errorFound == true) {
+//			cout << "Data is missing,review your input" << endl;
+//		}
+//		else {
+//			cout << "Dog registered successfully" << endl;
+//		}
+//	}
+//
+//	for (int i = 0; i < dogCount;i++) {
+//		cout << dogsList[i].microchipId << " " << dogsList[i].name << " " << dogsList[i].breed << endl;
+//	}
+//
+//	
+//
+//}
+//
+
+
+//
+//
+//
+//#include <iostream>
+//using namespace std;
+
+
+
+
+
+
+//int main() {
+//
+//
+//	struct dogDataType {
+//		string microchipId;
+//		string name;
+//		string breed;
+//	};
+//
+//
+//
+//
+//
+//	const int  dogCount = 3;
+//	//variables to hold dog`s information
+//
+//	string microchipId;
+//	string name;
+//	string breed;
+//	bool errorFound = false;
+//	dogDataType dogsList[dogCount]; //array to hold all dog`s information
+//
+//
+//
+//	for (int i = 0; i < dogCount; i++) {
+//		errorFound = false;
+//		cout << "Enter microchip ID :"; cin >> microchipId;
+//		cout << "Enter dog`s name :"; cin >> name;
+//		cout << "Enter the dog`s breed :"; cin >> breed;
+//
+//		//validate the user input data for the 3 dog`s properties
+//		if (microchipId.length() == 0 || name.length() == 0 || breed.length() == 0) {
+//			errorFound = true;
+//		}
+//		else { // all data has been input and is valid
+//			dogsList[i].microchipId = microchipId;
+//			dogsList[i].name = name;
+//			dogsList[i].breed = breed;
+//		}
+//
+//		if (errorFound == true) {
+//			cout << "Data is missing,review your input" << endl;
+//		}
+//		else {
+//			cout << "Dog registered successfully" << endl;
+//		}
+//	}
+//
+//	for (int i = 0; i < dogCount;i++) {
+//		cout << dogsList[i].microchipId << " " << dogsList[i].name << " " << dogsList[i].breed << endl;
+//	}
+//
+//
+//
+//}
+
+
+
+
+
+//#include <iostream>
+//#include <string>
+//
+//using namespace std;
+//
+//struct studentDataType {
+//	string studentId;
+//	string firstname;
+//	string lastname;
+//	string email;
+//};
+//
+//
+//
+//int main() {
+//
+//	
+//	bool errorFound = false;
+//	const int studentCount = 2; //change this to the number of students
+//	studentDataType studentList[studentCount]; //array to hold the list of students
+//	//temporary variables to read the data for validation purposes
+//	//string studentId;
+//	//string firstname;
+//	//string lastname;
+//	//string email;
+//
+//
+//	//adding students
+//	cout << endl;
+//	cout << "Adding Student" << endl;
+//	for (int i = 0; i < studentCount; i++) {
+//		//reset the errorFound variable value
+//		errorFound = false;
+//		cout << "Enter student id ";
+//		getline(cin, studentList[i].studentId);
+//		cout << "Enter firstname ";
+//		getline(cin, studentList[i].firstname);
+//		cout << "Enter lastname ";
+//		getline(cin, studentList[i].lastname);
+//		cout << "Enter email ";
+//		getline(cin, studentList[i].email);
+//
+//		//input data validation
+//		if ((studentList[i].studentId.length() == 0) || (studentList[i].firstname.length() == 0) || (studentList[i].lastname.length() == 0) || (studentList[i].email.length() == 0)) {
+//			errorFound = true;
+//		}
+//		else {
+//			continue;
+//		}
+//		//writing to the Error log files
+//		if (errorFound == true)
+//		{
+//			cout << "Data is missing. review you have entered data correctly " << endl;
+//			//write code to write to the Event log
+//			//TODO add error event event to the logfile
+//		}
+//		else {
+//			cout << "Student added successfully " << endl;
+//			//write code to write to the Event log
+//			// Write to the file
+//			//TODO add successful event to the logfile
+//		}
+//	}
+//
+//	//TODO: Close the file
+//
+//	//printing the list of students
+//	cout << endl;
+//	cout << "List of Student" << endl;
+//	for (int i = 0; i < studentCount; i++) {
+//		cout << studentList[i].studentId << " " << studentList[i].firstname << " " << studentList[i].lastname << studentList[i].email << endl;
+//	}
+//
+//}
+
+
+//-----------------------------------------------second part--------------------------------
+//#include <iostream>
+//#include <string>
+//#include <fstream> //library to work with files
+//using namespace std;
+//
+//struct studentDataType {
+//	string studentId;
+//	string firstname;
+//	string lastname;
+//	string email;
+//};
+//
+//int main() {
+//	bool errorFound = false;
+//	const int studentCount = 3; //change this to the number of students
+//	studentDataType studentList[studentCount]; //array to hold the list of students
+//	//temporary variables to read the data for validation purposes
+//	string studentId;
+//	string firstname;
+//	string lastname;
+//	string email;
+//
+//	ofstream logFile;
+//	logFile.open("my_event_log.txt", ios::app); //ios::out to recreate the file
+//	logFile << "Add students Program start"<<endl;
+//
+//
+//	//adding students
+//	cout << endl;
+//	cout << "Adding Student" << endl;
+//	for (int i = 0; i < studentCount; i++) {
+//		//reset the errorFound variable value
+//		errorFound = false;
+//		cout << "Enter student id ";
+//		getline(cin, studentId);   // cin when we put the space it thinks this is the second var for example cin >> var1 , var2 ; if we put De La Santa it will think var1 De var2 La but the whole surname is De La Santa so that`s why we are avoiding the problem by getline
+//		cout << "Enter firstname ";
+//		getline(cin, firstname);
+//		cout << "Enter lastname ";
+//		getline(cin, lastname);
+//		cout << "Enter email ";
+//		getline(cin, email);
+//
+//		//input data validation
+//		if ((studentId.length() == 0) || (firstname.length() == 0) || (lastname.length() == 0) || (email.length() == 0)) {
+//			errorFound = true;
+//		}
+//		else {
+//			studentList[i].studentId = studentId;
+//			studentList[i].firstname = firstname;
+//			studentList[i].lastname = lastname;
+//			studentList[i].email = email;
+//		}
+//		//writing to the Error log files
+//		if (errorFound == true)
+//		{
+//			cout << "Data is missing. review you have entered data correctly " << endl;
+//			//write code to write to the Event log
+//			//TODO add error event event to the logfile
+//			logFile << "Add Student: Adding student error occurred"<<endl;
+//		}
+//		else {
+//			cout << "Student added successfully " << endl;
+//			//write code to write to the Event log
+//			// Write to the file
+//			//TODO add successful event to the logfile
+//			logFile << "Add Student: Adding student successfully" << endl;
+//
+//		}
+//	}
+//
+//	//TODO: Close the file
+//	logFile.close();
+//
+//	//printing the list of students
+//	cout << endl;
+//	cout << "List of Student" << endl;
+//	for (int i = 0; i < studentCount; i++) {
+//		cout << studentList[i].studentId << " " << studentList[i].firstname << " " << studentList[i].lastname << studentList[i].email << endl;
+//	}
+//
+//}
+
+
+
+//break point etc we used 
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//struct studentDataType {
+//	string studentId;
+//	string firstname;
+//	string lastname;
+//	string email;
+//};
+//
+//int main() {
+//	bool errorFound = false;
+//	const int studentCount = 3; //change this to the number of students
+//	studentDataType studentList[studentCount]; //array to hold the list of students
+//	//temporary variables to read the data for validation purposes
+//	string studentId;
+//	string firstname;
+//	string lastname;
+//	string email;
+//
+//	
+//
+//	//adding students
+//	cout << endl;
+//	cout << "Adding Student" << endl;
+//	for (int i = 0; i < studentCount; i++) {
+//		//reset the errorFound variable value
+//		errorFound = false;
+//		cout << "Enter student id ";
+//		getline(cin, firstname);   // cin when we put the space it thinks this is the second var for example cin >> var1 , var2 ; if we put De La Santa it will think var1 De var2 La but the whole surname is De La Santa so that`s why we are avoiding the problem by getline
+//		cout << "Enter firstname ";
+//		getline(cin, firstname);
+//		cout << "Enter lastname ";
+//		getline(cin, lastname);
+//		cout << "Enter email ";
+//		getline(cin, email);
+//
+//		//input data validation
+//		if ((studentId.length() == 0) || (firstname.length() == 0) || (lastname.length() == 0) || (email.length() == 0)) {
+//			errorFound = true;
+//		}
+//		else {
+//			studentList[i].studentId = studentId;
+//			studentList[i].firstname = firstname;
+//			studentList[i].lastname = lastname;
+//			studentList[i].email = email;
+//		}
+//		//writing to the Error log files
+//		if (errorFound == true)
+//		{
+//			cout << "Data is missing. review you have entered data correctly " << endl;
+//			//write code to write to the Event log
+//			//TODO add error event event to the logfile
+//		}
+//		else {
+//			cout << "Student added successfully " << endl;
+//			//write code to write to the Event log
+//			// Write to the file
+//			//TODO add successful event to the logfile
+//
+//		}
+//	}
+//
+//
+//	//printing the list of students
+//	cout << endl;
+//	cout << "List of Student" << endl;
+//	for (int i = 0; i < studentCount; i++) {
+//		cout << studentList[i].studentId << " " << studentList[i].firstname << " " << studentList[i].lastname << studentList[i].email << endl;
+//	}
+//
+//}
+
+
+
+#include <iostream>
+#include <string>
+#include <cassert>
+using namespace std;
+
+/*
+	Assert Macro: test if the condition is tru else stops the program
+*/
+#define ASSERT(condition,message) \
+do { \
+	assert(condition && #message); \
+}while(0)
+
+
+struct studentDataType {
+	string studentId;
+	string firstname;
+	string lastname;
+	string email;
+};
+
+int main() {
+	bool errorFound = false;
+	const int studentCount = 3; //change this to the number of students
+	studentDataType studentList[studentCount]; //array to hold the list of students
+	//temporary variables to read the data for validation purposes
+	string studentId;
+	string firstname;
+	string lastname;
+	string email;
+
+	
+
+	//adding students
+	cout << endl;
+	cout << "Adding Student" << endl;
+	for (int i = 0; i < studentCount; i++) {
+		//reset the errorFound variable value
+		errorFound = false;
+		cout << "Enter student id ";
+		getline(cin, firstname);   // cin when we put the space it thinks this is the second var for example cin >> var1 , var2 ; if we put De La Santa it will think var1 De var2 La but the whole surname is De La Santa so that`s why we are avoiding the problem by getline
+		cout << "Enter firstname ";
+		getline(cin, firstname);
+		cout << "Enter lastname ";
+		getline(cin, lastname);
+		cout << "Enter email ";
+		getline(cin, email);
+
+		//input data validation
+		if ((studentId.length() == 0) || (firstname.length() == 0) || (lastname.length() == 0) || (email.length() == 0)) {
+			errorFound = true;
+		}
+		else {
+			studentList[i].studentId = studentId;
+			studentList[i].firstname = firstname;
+			studentList[i].lastname = lastname;
+			studentList[i].email = email;
+		}
+
+		ASSERT(errorFound != false, "ERROR has been found,stopping the program");  // if cond not true we will see the message if it`s true we will not see the message
+
+		//writing to the Error log files
+		if (errorFound == true)
+		{
+			cout << "Data is missing. review you have entered data correctly " << endl;
+			//write code to write to the Event log
+			
+		}
+		else {
+			cout << "Student added successfully " << endl;
+			//write code to write to the Event log
+			// Write to the file
+			//TODO add successful event to the logfile
+
+		}
+	}
+
+
+	//printing the list of students
+	cout << endl;
+	cout << "List of Student" << endl;
+	for (int i = 0; i < studentCount; i++) {
+		cout << studentList[i].studentId << " " << studentList[i].firstname << " " << studentList[i].lastname << studentList[i].email << endl;
+	}
+
+}
