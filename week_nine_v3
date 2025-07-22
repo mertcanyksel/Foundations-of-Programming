@@ -1,0 +1,82 @@
+#include <iostream>
+#include <string>
+using namespace std;
+#include <fstream> //library to work with files
+
+
+struct studentsInfo {
+	string fullName;
+	int age;
+	string email;
+};
+
+int main() {
+
+	int studentsAmount;
+	cout << "How many students do you want to add on data base : ";
+	cin >> studentsAmount;
+	cin.ignore();
+
+
+	string fullName;
+	int age;
+	string email;
+	bool errorFound = false;
+
+	studentsInfo students[100];
+	int validStudentIndex = 0;
+
+
+	ofstream logFile;
+	logFile.open("my_event_log.txt", ios::app); //ios::out to recreate the file
+	//	logFile << "Add students Program start"<<endl;
+
+
+	//adding students
+	cout << endl;
+	cout << "Adding Student" << endl;
+
+	for (int i = 0; i < studentsAmount; i++) {
+
+		//reset the errorFound variable value
+		errorFound = false;
+
+		cout << i + 1 << ". Student full name : ";
+		getline(cin, fullName);
+
+		cout << i + 1 << ". Student age : ";
+		cin >> age;
+		cin.ignore();
+
+		cout << i + 1 << ". Student email : ";
+		getline(cin, email);
+
+		if (fullName.empty() || age <= 0 || email.empty()) {
+			errorFound = true;
+			//cout << "Invalid input. Student not added.\n";
+			students[i].fullName = "Null";
+			students[i].age = 0;
+			students[i].email = "Null";
+		}
+		else {
+			students[i].fullName = fullName;
+			students[i].age = age;
+			students[i].email = email;
+		}
+
+		if (errorFound == true) {
+			cout << "Invalid input. Student not added.\n";
+			logFile << "Add Student: Adding student error occurred" << endl;
+		}
+		else {
+			cout << "Student registered successfully.\n";
+		}
+	}
+
+	for (int i = 0; i < studentsAmount; i++) {
+		cout << students[i].fullName << " | " << students[i].age << " | " << students[i].email << " | " << endl;
+
+	}
+}
+
+
